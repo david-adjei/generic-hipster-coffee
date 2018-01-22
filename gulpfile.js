@@ -22,7 +22,7 @@ gulp.task('html:clean', function() {
 });
 
 // Copy all HTML files 
-gulp.task('html:copy', function() {
+gulp.task('html:copy', ['html:clean'], function() {
 	return gulp.src('src/**/*.html')
 		.pipe(gulp.dest('dist/'));
 });
